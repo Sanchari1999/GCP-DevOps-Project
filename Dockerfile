@@ -16,4 +16,4 @@ COPY . .
 
 # This line specifies the command to run when the container starts
 # It runs the Flask development server with host set to 0.0.0.0, which allows external access
-CMD ["python3", "-m", "flask", "run", "--host:0.0.0.0"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
