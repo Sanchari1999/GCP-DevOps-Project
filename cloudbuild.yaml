@@ -6,7 +6,7 @@ steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/gcpdevops"]
   # deploy container image to GKE
-- name: "gcr.io/$PROJECT_ID/gke-deploy"
+- name: "gcr.io/cloud-builders/gke-deploy"
   args: 
   - run
   - --filename=gke.yaml
@@ -14,3 +14,4 @@ steps:
   - --location=us-central1-c
   - --cluster=gcpdevopsproject
   - --namespace=gcp-devops-prod
+timeout: 1200s
